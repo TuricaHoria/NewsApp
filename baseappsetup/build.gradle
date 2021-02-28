@@ -1,0 +1,80 @@
+apply plugin: 'com.android.library'
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion versions.compileSdk
+
+    defaultConfig {
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.compileSdk
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            buildConfigField "String", "API_BASE_URL", API_BASE_URL
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            buildConfigField "String", "API_BASE_URL", API_BASE_URL
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation kotlinDependencies.coreKtx
+    implementation kotlinDependencies.reflect
+
+    implementation supportDependencies.appCompat
+
+    implementation reactiveDependencies.rxJava
+    implementation reactiveDependencies.rxAndroid
+    implementation reactiveDependencies.rxKotlin
+
+    implementation architectureDependencies.lifecycleLiveData
+    implementation architectureDependencies.lifecycleProcess
+    implementation architectureDependencies.lifecycleExtensions
+
+    implementation networkingDependencies.retrofit
+    implementation networkingDependencies.converterGson
+    implementation networkingDependencies.adapterRxJava
+    implementation networkingDependencies.gson
+    implementation networkingDependencies.loggingInterceptor
+
+    implementation daggerDependencies.daggerAndroid
+    implementation daggerDependencies.dagger
+    implementation daggerDependencies.daggerSupport
+    kapt daggerDependencies.daggerCompiler
+    kapt daggerDependencies.daggerProcessor
+
+    testImplementation testsDependencies.jUnit
+    androidTestImplementation testsDependencies.testRunner
+    androidTestImplementation testsDependencies.testEspresso
+}
+
+repositories {
+    mavenCentral()
+}

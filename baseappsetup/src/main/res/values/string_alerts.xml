@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="alert_yes">Yes</string>
+    <string name="alert_ok">OK</string>
+    <string name="alert_try_again">Try Again</string>
+    <string name="alert_cancel">Cancel</string>
+    <string name="alert_confirm">Confirm</string>
+    <string name="alert_go_back">Go Back</string>
+    <string name="alert_error">Error</string>
+
+    <string name="alert_message_unknown">Sorry, an error has occurred. Please, try again later.</string>
+    <string name="alert_message_no_internet">Loading failed. Please make sure that you are connected to the internet.</string>
+    <string name="alert_message_action_unauthorized">Unauthorised action. Please contact us at %1$s</string>
+    <string name="alert_message_invalid_fields">Some fields does not meet the requirements.</string>
+
+    <string name="error_invalid_field">Invalid %1$s.</string>
+</resources>

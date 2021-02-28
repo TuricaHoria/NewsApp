@@ -1,0 +1,182 @@
+ext {
+    //Version
+    versions = [
+            'minSdk'             : 21,
+            'compileSdk'         : 28,
+
+            'coreKtx'            : '1.1.0',
+            'reflect'            : '1.3.60',
+
+            'appCompat'          : '1.1.0',
+            'legacy'             : '1.0.0',
+            'material'           : '1.1.0',
+            'constraintLayout'   : '1.1.3',
+            'viewPager'          : '1.0.0',
+            'viewPager2'         : '1.0.0',
+
+            'rxJava'             : '2.1.1',
+            'rxAndroid'          : '2.1.1',
+            'rxKotlin'           : '2.4.0',
+            'rxRelay'            : '2.1.1',
+
+            'retrofit'           : '2.6.2',
+            'gson'               : '2.8.6',
+            'okhttp'             : '4.2.2',
+
+            'databinding'        : '3.5.2',
+            'lifecycle'          : '2.2.0',
+            'paging'             : '2.1.0',
+
+            'dagger'             : '2.25.2',
+
+            'firebase'           : '17.2.1',
+            'firebaseCrashlytics': '2.10.1',
+            'firebaseMessaging'  : '20.0.1',
+
+            'circleImageView'    : '3.0.1',
+            'glide'              : '4.10.0',
+            'imageCropper'       : '2.8.0',
+            'photoView'          : '2.0.0',
+
+            'gravitySnap'        : '2.2.0',
+            'keyboardListener'   : '2.3.0',
+            'expandableLayout'   : '2.9.2',
+            'bounceScroll'       : '1.0.4',
+            'materialRatingBar'  : '1.4.0',
+
+            'navigation'         : '2.1.0',
+
+            'exoPlayer'          : '2.10.6',
+            'arviPlayer'         : '1.2.0',
+
+            'rangeBar'           : '1.4.6',
+            'calendar'           : '1.2.3',
+            'swipedecorator'     : '1.2.2',
+            'swipeRefreshLayout' : '1.0.0',
+
+            'realmExtensions'    : '2.5.0'
+    ]
+
+    versionsTests = [
+            'jUnit'       : '4.12',
+            'testRunner'  : '1.2.0',
+            'testEspresso': '3.2.0',
+            'mockito'     : '3.1.0',
+            'archCore'    : '2.1.0'
+    ]
+
+    kotlinDependencies = [
+            coreKtx: "androidx.core:core-ktx:$versions.coreKtx",
+            reflect: "org.jetbrains.kotlin:kotlin-reflect:$versions.reflect"
+    ]
+
+    // Reactive Dependencies
+    reactiveDependencies = [
+            rxJava   : "io.reactivex.rxjava2:rxjava:$versions.rxJava",
+            rxAndroid: "io.reactivex.rxjava2:rxandroid:$versions.rxAndroid",
+            rxKotlin : "io.reactivex.rxjava2:rxkotlin:$versions.rxKotlin",
+            rxRelay  : "com.jakewharton.rxrelay2:rxrelay:$versions.rxRelay"
+    ]
+
+    // Networking
+    networkingDependencies = [
+            retrofit          : "com.squareup.retrofit2:retrofit:$versions.retrofit",
+            converterGson     : "com.squareup.retrofit2:converter-gson:$versions.retrofit",
+            adapterRxJava     : "com.squareup.retrofit2:adapter-rxjava2:$versions.retrofit",
+            gson              : "com.google.code.gson:gson:$versions.gson",
+            loggingInterceptor: "com.squareup.okhttp3:logging-interceptor:$versions.okhttp",
+            okhttp            : "com.squareup.okhttp3:okhttp:$versions.okhttp"
+    ]
+
+    //Support Libraries dependencies
+    supportDependencies = [
+            appCompat       : "androidx.appcompat:appcompat:$versions.appCompat",
+            legacy          : "androidx.legacy:legacy-support-v4:$versions.legacy",
+            material        : "com.google.android.material:material:$versions.material",
+            constraintLayout: "androidx.constraintlayout:constraintlayout:$versions.constraintLayout",
+            viewPager       : "androidx.viewpager:viewpager:$versions.viewPager",
+            viewPager2      : "androidx.viewpager2:viewpager2:$versions.viewPager2",
+            palette         : "androidx.palette:palette:$versions.legacy"
+    ]
+
+    // MVVM Dependencies
+    architectureDependencies = [
+            dataBinding          : "androidx.databinding:databinding-compiler:$versions.databinding",
+            lifecycleExtensions  : "androidx.lifecycle:lifecycle-extensions:$versions.lifecycle",
+            lifecycleRuntime     : "androidx.lifecycle:lifecycle-runtime-ktx:$versions.lifecycle",
+            lifecycleCompiler    : "androidx.lifecycle:lifecycle-compiler:$versions.lifecycle",
+            lifecycleViewModel   : "androidx.lifecycle:lifecycle-viewmodel-savedstate:$versions.lifecycle",
+            lifecycleViewModelKTX: "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.lifecycle",
+            lifecycleLiveData    : "androidx.lifecycle:lifecycle-livedata-ktx:$versions.lifecycle",
+            lifecycleProcess     : "androidx.lifecycle:lifecycle-process:$versions.lifecycle",
+            paging               : "androidx.paging:paging-runtime:$versions.paging"
+    ]
+
+    daggerDependencies = [
+            daggerAndroid  : "com.google.dagger:dagger-android:$versions.dagger",
+            daggerProcessor: "com.google.dagger:dagger-android-processor:$versions.dagger",
+            dagger         : "com.google.dagger:dagger:$versions.dagger",
+            daggerCompiler : "com.google.dagger:dagger-compiler:$versions.dagger",
+            daggerSupport  : "com.google.dagger:dagger-android-support:$versions.dagger"
+    ]
+
+    firebaseDependencies = [
+            firebase           : "com.google.firebase:firebase-core:$versions.firebase",
+            firebaseCrashlytics: "com.crashlytics.sdk.android:crashlytics:$versions.firebaseCrashlytics",
+            firebaseMessaging  : "com.google.firebase:firebase-messaging:$versions.firebaseMessaging"
+    ]
+
+    // Image Loader Dependencies
+    imageLoaderDependencies = [
+            circleImageView: "de.hdodenhof:circleimageview:$versions.circleImageView",
+            glide          : "com.github.bumptech.glide:glide:$versions.glide",
+            glideCompiler  : "com.github.bumptech.glide:compiler:$versions.glide",
+            imageCropper   : "com.theartofdev.edmodo:android-image-cropper:$versions.imageCropper",
+            photoView      : "com.github.chrisbanes:PhotoView:$versions.photoView"
+    ]
+
+    widgetDependencies = [
+            gravitySnap       : "com.github.rubensousa:gravitysnaphelper:$versions.gravitySnap",
+            keyboardListener  : "net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:$versions.keyboardListener",
+            expandableLayout  : "net.cachapa.expandablelayout:expandablelayout:$versions.expandableLayout",
+            bounceScroll      : "me.everything:overscroll-decor-android:$versions.bounceScroll",
+            rangeBar          : "com.appyvet:materialrangebar:$versions.rangeBar",
+            calendar          : "com.jakewharton.threetenabp:threetenabp:$versions.calendar",
+            materialRatingBar : "me.zhanghai.android.materialratingbar:library:$versions.materialRatingBar",
+            swipedecorator    : "it.xabaras.android:recyclerview-swipedecorator:$versions.swipedecorator",
+            swipeRefreshLayout: "androidx.swiperefreshlayout:swiperefreshlayout:$versions.swipeRefreshLayout"
+    ]
+
+    navigationDependencies = [
+            navFragment   : "androidx.navigation:navigation-fragment:$versions.navigation",
+            navUI         : "androidx.navigation:navigation-ui:$versions.navigation",
+            navFragmentKtx: "androidx.navigation:navigation-fragment-ktx:$versions.navigation",
+            navUIKtx      : "androidx.navigation:navigation-ui-ktx:$versions.navigation"
+    ]
+
+    // Media Audio/Video Dependencies
+    exoPlayerDependencies = [
+            full        : "com.google.android.exoplayer:exoplayer:$versions.exoPlayer",
+            core        : "com.google.android.exoplayer:exoplayer-core:$versions.exoPlayer",
+            dash        : "com.google.android.exoplayer:exoplayer-dash:$versions.exoPlayer",
+            ui          : "com.google.android.exoplayer:exoplayer-ui:$versions.exoPlayer",
+
+            arvi        : "com.arthurivanets.arvi:arvi:$versions.arviPlayer",
+            arviAdapster: "com.arthurivanets.arvi:arvi-adapster:$versions.arviPlayer",
+            arviKtx     : "com.arthurivanets.arvi:arvi-ktx:$versions.arviPlayer",
+            arviUtils   : "com.arthurivanets.arvi:arvi-utils:$versions.arviPlayer"
+    ]
+
+    // Test Libraries Dependencies
+    testsDependencies = [
+            jUnit       : "junit:junit:$versionsTests.jUnit",
+            testRunner  : "androidx.test:runner:$versionsTests.testRunner",
+            testEspresso: "androidx.test.espresso:espresso-core:$versionsTests.testEspresso",
+            mockito     : "org.mockito:mockito-core:$versionsTests.mockito",
+            archCore    : "androidx.arch.core:core-testing:$versionsTests.archCore"
+    ]
+
+    realmDependencies = [
+            extensions: "com.github.vicpinm:krealmextensions:$versions.realmExtensions"
+    ]
+}

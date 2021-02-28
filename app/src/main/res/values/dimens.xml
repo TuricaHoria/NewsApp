@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Text sizes-->
+    <dimen name="article_title_text_size">20sp</dimen>
+    <dimen name="article_content_text_size">15sp</dimen>
+
+
+    <!--Margins-->
+    <dimen name="extra_small_margin">10dp</dimen>
+    <dimen name="small_margin">15dp</dimen>
+    <dimen name="medium_margin">25dp</dimen>
+    <dimen name="big_margin">35dp</dimen>
+    <dimen name="very_big_margin">50dp</dimen>
+
+    <dimen name="landing_page_margin">60dp</dimen>
+    <dimen name="arrow_icon_margin">12dp</dimen>
+
+
+
+    <!--Padding-->
+    <dimen name="extra_small_padding">8dp</dimen>
+    <dimen name="small_padding">15dp</dimen>
+    <dimen name="medium_padding">25dp</dimen>
+    <dimen name="big_padding">35dp</dimen>
+    <dimen name="very_big_padding">50dp</dimen>
+
+
+    <!--Other dimens-->
+
+    <dimen name="article_line_spacing">7dp</dimen>
+    <dimen name="basic_elevation">5dp</dimen>
+    <dimen name="full_article_button_height">35dp</dimen>
+    <dimen name="headline_photo_height">300dp</dimen>
+    <dimen name="article_photo_dimensions">90dp</dimen>
+
+
+
+
+
+
+</resources>
